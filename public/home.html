@@ -38,8 +38,11 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <div class="d-flex">
               <a href="home.html"
                 ><button class="btn" type="button">
                   <i
@@ -52,19 +55,15 @@
               ></a>
               <div class="dropdown">
                 <button
-                  class="btn btn-secondary dropdown-toggle"
+                  class="btn dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  <i class="bi bi-currency-exchange fs-4"></i>
+                  <i class="bi bi-person-circle fs-4"></i>
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
+                  <li><a class="dropdown-item" href="#">Sair</a></li>
                 </ul>
               </div>
             </div>
@@ -73,111 +72,57 @@
       </nav>
     </header>
     <main>
-      <div class="container">
-        <div class="row vh-100">
-          <div class="col d-flex justify-content-center my-5 flex-column">
-            <div class="text-login">
-              <p>Organize suas finanças de uma forma fácil.</p>
-              <p>Controle o seu dinheiro e investimentos.</p>
-              <p>Economize e atinja os seus objetivos.</p>
-            </div>
+      <div class="container-lg">
+        <div class="row">
+          <div class="col mt-4 d-flex justify-content-start align-items-center">
+            <i class="bi bi-cash-coin color-primary icon-detail"></i>
+            <span class="fs-2">R$0,00</span>
+          </div>
+          <div class="col d-flex mt-4 justify-content-end">
             <div class="text-center">
-              <img
-                src="./assets/images/pocket.png"
-                alt="image pocket"
-                class="img-fluid"
-              />
-              <img
-                src="./assets/images//coins.png"
-                alt="image coins"
-                class="img-fluid d-none d-md-inline coins"
-              />
+              <img src="./assets/images/coins-small.png" alt="small coins" />
             </div>
           </div>
-          <div class="col d-flex justify-content-center my-5 flex-column">
+        </div>
+        <div class="row">
+          <div class="col-12 info shadow-lg">
             <div class="container">
               <div class="row">
-                <div class="col d-flex justify-content-center my-5 flex-column">
-                  <div class="text-center mb-3">
-                    <img
-                      src="./assets/images/nikel-logo.png"
-                      alt="nikel logo"
-                      class="img-fluid"
-                    />
+                <div class="col-6">
+                  <span class="fs-4"
+                    >Entradas
+                    <i class="bi bi-arrow-down-circle fs-2 align-middle"></i
+                  ></span>
+                </div>
+                <div class="col-6">
+                  <span class="fs-4"
+                    >Saídas
+                    <i class="bi bi-arrow-up-circle fs-2 align-middle"></i
+                  ></span>
+                </div>
+                <div class="col-12 my-2">
+                  <hr />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">R$1000,00</div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <form>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label"
-                        >E- mail</label
-                      >
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="exampleInputEmail1"
-                        aria-describedby="emailHelp"
-                      />
-                      <div id="emailHelp" class="form-text">
-                        Utilize seu e-mail para realizar o login.
-                      </div>
+                <div class="col-6">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col">R$500,00</div>
                     </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label"
-                        >Senha</label
-                      >
-                      <input
-                        type="password"
-                        class="form-control"
-                        id="exampleInputPassword1"
-                      />
-                    </div>
-                    <div class="mb-3 form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="exampleCheck1"
-                      />
-                      <label class="form-check-label" for="exampleCheck1"
-                        >Permanecer logado</label
-                      >
-                    </div>
-                    <button type="submit" class="btn button-login">
-                      Entrar
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <p class="text-center mt-2 form-text">
-                    Ainda não tem conta?
-                    <span class="link-default">Criar uma conta.</span>
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="text-center mt-4">
-                    <img
-                      src="./assets/images/codai-logo.png"
-                      alt="codai logo"
-                      class="img-fluid"
-                    />
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="text-center">
-                    <img
-                      src="./assets/images/growdev-logo.png"
-                      alt="growdev logo"
-                      class="img-fluid"
-                    />
-                  </div>
+                <div class="col-12">
+                  <button type="button" class="btn button-default">
+                    Ver Todas
+                  </button>
                 </div>
               </div>
             </div>
