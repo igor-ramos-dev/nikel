@@ -52,6 +52,30 @@ header {
   color: #fff;
 }
 
+.button-cancel {
+  border-radius: 10px;
+}
+
+.button-float {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 35px;
+  border: 2px solid #4e0070;
+  background-color: #4e0070;
+  color: #fff;
+  padding: 0 !important;
+}
+
+.button-float:hover {
+  border-color: #4c79d3;
+  color: #4c79d3;
+  background-color: #fff;
+}
+
 .button-login:hover,
 .button-default:hover {
   background-color: #4c79d3;
