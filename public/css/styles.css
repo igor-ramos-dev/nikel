@@ -96,3 +96,7 @@ header {
   border-radius: 20px 20px 0 0;
   padding-top: 20px;
 }
+
+.logout {
+  min-width: 5rem !important;
+}

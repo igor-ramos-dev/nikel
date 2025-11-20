@@ -42,7 +42,7 @@
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
-            <div class="d-flex">
+            <div class="d-flex menu">
               <a href="home.html"
                 ><button class="btn" type="button">
                   <i
@@ -62,8 +62,12 @@
                 >
                   <i class="bi bi-person-circle fs-4"></i>
                 </button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Sair</a></li>
+                <ul class="dropdown-menu logout">
+                  <li>
+                    <button class="dropdown-item" id="button-logout">
+                      Sair
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -165,6 +169,7 @@
                     class="form-control"
                     id="value-input"
                     aria-describedby="emailHelp"
+                    required
                   />
                 </div>
                 <div class="mb-3">
@@ -175,12 +180,18 @@
                     type="text"
                     class="form-control"
                     id="description-input"
+                    required
                   />
                 </div>
 
                 <div class="mb-3">
                   <label for="date-input" class="form-label">Data</label>
-                  <input type="date" class="form-control" id="date-input" />
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date-input"
+                    required
+                  />
                 </div>
                 <div class="mb-3">
                   <div class="form-check form-check-inline">
@@ -233,5 +244,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
