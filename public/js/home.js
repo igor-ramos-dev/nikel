@@ -9,6 +9,11 @@ let data = {
 
 // ENCERRAR SESSÃO DO USUÁRIO
 document.getElementById("button-logout").addEventListener("click", logout);
+document
+  .getElementById("transaction-button")
+  .addEventListener("click", function () {
+    window.location.href = "transactions.html";
+  });
 
 // ADICIONAR LANÇAMENTO
 document
