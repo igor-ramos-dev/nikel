@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <!-- Link para o meu CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Título do projeto -->
     <title>Nikel</title>
   </head>
   <body id="login">
     <main>
       <div class="container">
         <div class="row vh-100">
+          <!-- Bloco da esquerda - Apresentação da aplicação -->
           <div class="col d-flex justify-content-center my-5 flex-column">
             <div class="text-login">
               <p>Organize suas finanças de uma forma fácil.</p>
@@ -35,8 +42,11 @@
               />
             </div>
           </div>
+
+          <!-- Bloco da direita - Formulário de login -->
           <div class="col d-flex justify-content-center my-5 flex-column">
             <div class="container">
+              <!-- Logo do Nikel -->
               <div class="row">
                 <div class="col d-flex justify-content-center my-5 flex-column">
                   <div class="text-center mb-3">
@@ -48,9 +58,12 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Formulário de Login -->
               <div class="row">
                 <div class="col">
                   <form id="login-form">
+                    <!-- Campo de Email -->
                     <div class="mb-3">
                       <label for="email-input" class="form-label"
                         >E- mail</label
@@ -65,6 +78,8 @@
                         Utilize seu e-mail para realizar o login.
                       </div>
                     </div>
+
+                    <!-- Campo de Senha -->
                     <div class="mb-3">
                       <label for="password-input" class="form-label"
                         >Senha</label
@@ -75,6 +90,8 @@
                         id="password-input"
                       />
                     </div>
+
+                    <!-- Checkbox para permanecer logado -->
                     <div class="mb-3 form-check">
                       <input
                         type="checkbox"
@@ -85,12 +102,16 @@
                         >Permanecer logado</label
                       >
                     </div>
+
+                    <!-- Botão de ação para o login -->
                     <button type="submit" class="btn button-login">
                       Entrar
                     </button>
                   </form>
                 </div>
               </div>
+
+              <!-- Link para criar conta -->
               <div class="row">
                 <div class="col">
                   <p id="link-conta" class="text-center mt-2 form-text">
@@ -105,6 +126,8 @@
                   </p>
                 </div>
               </div>
+
+              <!-- Logo do Codaí -->
               <div class="row">
                 <div class="col">
                   <div class="text-center mt-4">
@@ -116,6 +139,8 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Logo da Growdev -->
               <div class="row">
                 <div class="col">
                   <div class="text-center">
@@ -142,6 +167,7 @@
       >
         <div class="modal-dialog">
           <div class="modal-content">
+            <!-- Cabeçalho do Modal -->
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Crie sua conta</h5>
               <button
@@ -151,8 +177,12 @@
                 aria-label="Close"
               ></button>
             </div>
+
+            <!-- Formulário de cadastro -->
             <form id="create-form">
+              <!-- Campos do Formulário -->
               <div class="modal-body">
+                <!-- Campo de email -->
                 <div class="mb-3">
                   <label for="email-create-input" class="form-label"
                     >E- mail</label
@@ -167,6 +197,8 @@
                     Utilize seu e-mail para criar a conta.
                   </div>
                 </div>
+
+                <!-- Campo de senha -->
                 <div class="mb-3">
                   <label for="password-create-input" class="form-label"
                     >Senha</label
@@ -182,6 +214,8 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Botões de ação do formulário -->
               <div class="modal-footer">
                 <button
                   type="button"
@@ -199,11 +233,15 @@
         </div>
       </div>
     </main>
+
+    <!-- Bootstrap JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Meu arquivo JS -->
     <script src="./js/index.js"></script>
   </body>
 </html>
