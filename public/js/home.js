@@ -9,39 +9,34 @@ let data = {
 
 // ENCERRAR SESSÃO DO USUÁRIO
 document.getElementById("button-logout").addEventListener("click", logout);
-document
-  .getElementById("transaction-button")
-  .addEventListener("click", function () {
-    window.location.href = "transactions.html";
-  });
+
+document.getElementById("transaction-button").addEventListener("click", () => {
+  window.location.href = "transactions.html";
+});
 
 // ADICIONAR LANÇAMENTO
-document
-  .getElementById("transaction-form")
-  .addEventListener("submit", function (e) {
-    e.preventDefault();
-    const value = +document.getElementById("value-input").value;
-    const description = document.getElementById("description-input").value;
-    const date = document.getElementById("date-input").value;
-    const type = document.querySelector(
-      'input[name="type-input"]:checked'
-    ).value;
+document.getElementById("transaction-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const value = +document.getElementById("value-input").value;
+  const description = document.getElementById("description-input").value;
+  const date = document.getElementById("date-input").value;
+  const type = document.querySelector('input[name="type-input"]:checked').value;
 
-    data.transactions.unshift({
-      value,
-      type,
-      description,
-      date,
-    });
-
-    saveData(data);
-    e.target.reset();
-    myModal.hide();
-    getCashIn();
-    getCashOut();
-    getTotal();
-    alert("Lançamento adicionado com sucesso!");
+  data.transactions.unshift({
+    value,
+    type,
+    description,
+    date,
   });
+
+  saveData(data);
+  e.target.reset();
+  myModal.hide();
+  getCashIn();
+  getCashOut();
+  getTotal();
+  alert("Lançamento adicionado com sucesso!");
+});
 
 checkLogged();
 
