@@ -35,6 +35,8 @@ document.getElementById("transaction-form").addEventListener("submit", (e) => {
   e.target.reset();
   myModal.hide();
 
+  getTransactions();
+
   alert("Lançamento adicionado com sucesso!");
 });
 
@@ -56,7 +58,27 @@ function checkLogged() {
     data = JSON.parse(dataUser);
   }
 
-  getCashIn();
-  getCashOut();
-  getTotal();
+  getTransactions();
+}
+
+function saveData(data) {
+  localStorage.setItem(data.login, JSON.stringify(data));
+}
+
+function getTransactions() {
+  const transactions = data.transactions;
+  let transactionsHtml = ``;
+
+  transactions?.forEach((item) => {
+    const type = item.type === "1" ? "Entrada" : "Saída";
+
+    transactionsHtml += `<tr>
+                        <th scope="row">${item.date}</th>
+                        <td>${item.value.toFixed(2)}</td>
+                        <td>${type}</td>
+                        <td>${item.description}</td>
+                      </tr>`;
+  });
+
+  document.getElementById("transactions-list").innerHTML = transactionsHtml;
 }

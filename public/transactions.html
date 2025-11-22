@@ -98,13 +98,8 @@
                         <th scope="col">Descrição</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">08/11/2021</th>
-                        <td>50.00</td>
-                        <td>Saída</td>
-                        <td>Gasolina</td>
-                      </tr>
+                    <tbody id="transactions-list">
+                      
                     </tbody>
                   </table>
                 </div>
@@ -147,6 +142,7 @@
                   <label for="value-input" class="form-label">Valor</label>
                   <input
                     type="number"
+                    step="any"
                     class="form-control"
                     id="value-input"
                     aria-describedby="emailHelp"
