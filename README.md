@@ -1,9 +1,11 @@
-📘 Nikel
+📘 **Nikel**
 
 Uma ferramenta simples de controle financeiro pessoal, com a qual você pode registrar as entradas e saídas de seu dinheiro, 
 visualizar o histórico de transações e o saldo total atualizado a cada nova transação que for inserida.
 
-🚀 Funcionalidades
+<br />
+
+🚀 **Funcionalidades**
 
 -Criar uma conta que fica salva no localStorage, sem a necessidade de utilizar o backend.
 
@@ -17,8 +19,9 @@ visualizar o histórico de transações e o saldo total atualizado a cada nova t
 
 -Visualizar tanto as transações mais recentes quanto o histórico completo
 
+<br />
 
-🛠️ Tecnologias utilizadas
+🛠️ **Tecnologias utilizadas**
 
 HTML
 
@@ -28,7 +31,8 @@ JavaScript
 
 LocalStorage / SessionStorage
 
+<br />
 
-▶️ Como executar o projeto
+▶️ **Como executar o projeto**
 
 Basta baixar os arquivos e abrir o index.html no navegador.
