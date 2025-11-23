@@ -3,23 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <!-- Link para utilizar os ícones do Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+
+    <!-- Link para o meu CSS -->
     <link rel="stylesheet" href="./css/styles.css" />
-    <title>Nikel - Home</title>
+
+    <!-- Título da página -->
+    <title>Nikel - Transações</title>
   </head>
   <body id="app">
+    <!-- Cabeçalho da aplicação (Níkel) -->
     <header>
-      <nav class="navbar navbar-expand navbar-light bg-white">
+      <nav class="navbar navbar-expand-sm navbar-light bg-white">
         <div class="container-fluid">
+          <!-- Logo da aplicação -->
           <a class="navbar-brand" href="#">
             <img
               src="./assets/images/nikel-small-logo.png"
@@ -27,6 +37,8 @@
               class="img-fluid"
             />
           </a>
+
+          <!-- Botão de "hamburguer" para telas pequenas ( <= 575px) -->
           <button
             class="navbar-toggler"
             type="button"
@@ -38,21 +50,28 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Ícones do cabeçalho -->
           <div
             class="collapse navbar-collapse justify-content-end"
             id="navbarSupportedContent"
           >
             <div class="d-flex menu">
+              <!-- Link para a página Home -->
               <a href="home.html"
                 ><button class="btn" type="button">
                   <i class="bi bi-house-door-fill fs-4"></i></button
               ></a>
+
+              <!-- Link para a página de transações (atual) -->
               <a href="transactions.html"
                 ><button class="btn" type="button">
                   <i
                     class="bi bi-currency-exchange color-secondary fs-4"
                   ></i></button
               ></a>
+
+              <!-- Dropdown com botão de logout -->
               <div class="dropdown">
                 <button
                   class="btn dropdown-toggle"
@@ -63,7 +82,11 @@
                   <i class="bi bi-person-circle fs-4"></i>
                 </button>
                 <ul class="dropdown-menu logout">
-                  <li><button class="dropdown-item" id="button-logout">Sair</button></li>
+                  <li>
+                    <button class="dropdown-item" id="button-logout">
+                      Sair
+                    </button>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -71,36 +94,51 @@
         </div>
       </nav>
     </header>
+
+    <!-- Corpo da página -->
     <main>
+      <!-- Transações -->
       <div class="container-lg">
+        <!-- Cabeçalho -->
         <div class="row">
+          <!-- Título -->
           <div class="col mt-4 d-flex justify-content-start align-items-center">
             <i class="bi bi-currency-exchange color-primary icon-detail"></i>
             <span class="fs-2">Lançamentos</span>
           </div>
+
+          <!-- Imagem das moedas -->
           <div class="col d-flex mt-4 justify-content-end">
             <div class="text-center">
               <img src="./assets/images/coins-small.png" alt="small coins" />
             </div>
           </div>
         </div>
+
+        <!-- Detalhes das transações -->
         <div class="row">
           <div class="col-12 info shadow-lg">
             <div class="container">
               <div class="row">
                 <div class="col">
+                  <!-- Tabela de transações -->
                   <table class="table">
                     <thead>
                       <tr>
+                        <!-- Data da transação -->
                         <th scope="col">Data</th>
+
+                        <!-- Valor da transação -->
                         <th scope="col">Valor</th>
+
+                        <!-- Tipo (entrada ou saída) da transação -->
                         <th scope="col">Tipo</th>
+
+                        <!-- Descrição da transação -->
                         <th scope="col">Descrição</th>
                       </tr>
                     </thead>
-                    <tbody id="transactions-list">
-                      
-                    </tbody>
+                    <tbody id="transactions-list"></tbody>
                   </table>
                 </div>
               </div>
@@ -108,14 +146,17 @@
           </div>
         </div>
       </div>
+
+      <!-- Botão para abrir o Modal de adicionar transação -->
       <button
-          class="btn button-float"
-          data-bs-toggle="modal"
-          data-bs-target="#transaction-modal"
-        >
-          <i class="bi bi-plus"></i>
-        </button>
-      </div>
+        class="btn button-float"
+        data-bs-toggle="modal"
+        data-bs-target="#transaction-modal"
+      >
+        <i class="bi bi-plus"></i>
+      </button>
+
+      <!-- Modal -->
       <div
         class="modal fade"
         id="transaction-modal"
@@ -125,10 +166,14 @@
       >
         <div class="modal-dialog">
           <div class="modal-content">
+            <!-- Cabeçalho do Modal -->
             <div class="modal-header">
+              <!-- Título -->
               <h5 class="modal-title" id="exampleModalLabel">
                 Adicionar Lançamento
               </h5>
+
+              <!-- Botão p/ fechar o Modal -->
               <button
                 type="button"
                 class="btn-close"
@@ -136,8 +181,12 @@
                 aria-label="Close"
               ></button>
             </div>
+
+            <!-- Formulário p/ adicionar transação -->
             <form id="transaction-form">
+              <!-- Campos do formulário -->
               <div class="modal-body">
+                <!-- Campo p/ adicionar o valor -->
                 <div class="mb-3">
                   <label for="value-input" class="form-label">Valor</label>
                   <input
@@ -148,6 +197,8 @@
                     aria-describedby="emailHelp"
                   />
                 </div>
+
+                <!-- Campo p/ adicionar a descrição -->
                 <div class="mb-3">
                   <label for="description-input" class="form-label"
                     >Descrição</label
@@ -159,10 +210,13 @@
                   />
                 </div>
 
+                <!-- Campo p/ adicionar a data -->
                 <div class="mb-3">
                   <label for="date-input" class="form-label">Data</label>
                   <input type="date" class="form-control" id="date-input" />
                 </div>
+
+                <!-- Checkbox para selecionar se é 'entrada' ou 'saída' -->
                 <div class="mb-3">
                   <div class="form-check form-check-inline">
                     <input
@@ -191,7 +245,10 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Rodapé do formulário -->
               <div class="modal-footer">
+                <!-- Botão p/ cancelar transação -->
                 <button
                   type="button"
                   class="btn btn-secondary button-cancel"
@@ -199,6 +256,8 @@
                 >
                   Cancelar
                 </button>
+
+                <!-- Botão p/ adicionar transação -->
                 <button type="submit" class="btn button-default">
                   Adicionar
                 </button>
@@ -209,11 +268,14 @@
       </div>
     </main>
 
+    <!-- Bootstrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Meu arquivo JS -->
     <script src="./js/transactions.js"></script>
   </body>
 </html>
