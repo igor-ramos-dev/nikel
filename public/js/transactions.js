@@ -119,3 +119,43 @@ function getTransactions() {
 
   document.getElementById("transactions-list").innerHTML = transactionsHtml;
 }
+
+// Acompanha a transação no campo de busca
+document
+  .getElementById("search-input")
+  .addEventListener("input", filterTransactions);
+
+// Filtra as transações pelo campo de busca
+function filterTransactions() {
+  // Variável p/ armazenar o que foi digitado
+  const searchTerm = document
+    .getElementById("search-input")
+    .value.toLowerCase();
+
+  // Variável que armazena a filtragem de todas as transações buscadas
+  const filtered = data.transactions.filter((item) =>
+    item.description.toLowerCase().includes(searchTerm)
+  );
+
+  // Chama a função que renderiza o resultado da busca
+  renderFilteredTransactions(filtered);
+}
+
+// Renderiza o resultado da busca
+function renderFilteredTransactions(list) {
+  let html = "";
+
+  // Checa se a transação é uma entrada ou uma saída
+  list.forEach((item) => {
+    const type = item.type === "1" ? "Entrada" : "Saída";
+
+    html += `<tr>
+              <th scope="row">${item.date}</th>
+              <td>${item.value.toFixed(2)}</td>
+              <td>${type}</td>
+              <td>${item.description}</td>
+            </tr>`;
+  });
+
+  document.getElementById("transactions-list").innerHTML = html;
+}

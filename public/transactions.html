@@ -117,10 +117,22 @@
 
         <!-- Detalhes das transações -->
         <div class="row">
-          <div class="col-12 info shadow-lg">
+          <div class="col-12 info shadow-lg" style="border-radius: 20px">
             <div class="container">
               <div class="row">
                 <div class="col">
+                  <!-- Campo p/ buscar por uma transação -->
+                  <div class="row mb-3 mt-3">
+                    <div class="col-12">
+                      <input
+                        type="text"
+                        id="search-input"
+                        class="form-control"
+                        placeholder="Buscar transação pelo nome..."
+                      />
+                    </div>
+                  </div>
+
                   <!-- Tabela de transações -->
                   <table class="table">
                     <thead>
