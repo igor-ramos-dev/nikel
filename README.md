@@ -1,7 +1,7 @@
 📘 **Nikel**
 
 Uma ferramenta simples de controle financeiro pessoal, com a qual você pode registrar as entradas e saídas de seu dinheiro, 
-visualizar o histórico de transações e o saldo total atualizado a cada nova transação que for inserida.
+visualizar o histórico de transações, o saldo total que é atualizado a cada nova transação inserida e a funcionalidade de buscar por uma transação pela sua descrição.
 
 <br />
 
@@ -18,6 +18,8 @@ visualizar o histórico de transações e o saldo total atualizado a cada nova t
 -Acompanhar o saldo total
 
 -Visualizar tanto as transações mais recentes quanto o histórico completo
+
+-Buscar por uma transação inserindo sua descrição no campo de busca
 
 <br />
 
