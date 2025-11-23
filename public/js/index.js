@@ -1,5 +1,10 @@
+// Modal do bootstrap
 const myModal = new bootstrap.Modal("#register-modal");
+
+// Retorna o usuário logado no sessionStorage, se existir
 let logged = sessionStorage.getItem("logged");
+
+// Retorna a sessão salva no localStorage, se existir
 const session = localStorage.getItem("session");
 
 // 1 - Verificar se existe um usuário já logado
@@ -52,6 +57,7 @@ document.getElementById("create-form").addEventListener("submit", (e) => {
   alert("Conta criada com sucesso!");
 });
 
+// Verifica se há uma conta no localStorage
 function getAccount(key) {
   const account = localStorage.getItem(key);
 
@@ -64,33 +70,42 @@ function getAccount(key) {
 
 // LOGAR NO SISTEMA
 document.getElementById("login-form").addEventListener("submit", (e) => {
+  // 1 - Impede a atualização da página
   e.preventDefault();
 
+  // 2 - Captura os dados do usuário
   const email = document.getElementById("email-input").value;
   const password = document.getElementById("password-input").value;
   const checkSession = document.getElementById("session-check").checked;
 
+  // 3 - Busca a conta do usuário no localStorage
   const account = getAccount(email);
 
+  // 4 - Caso não exista, informa erro ao usuário
   if (!account) {
     alert("Verifique o usuário ou a senha");
     return;
   }
 
+  // 5 - Verifica se a senha informada é a mesma que já está cadastrada
   if (account.password !== password) {
     alert("Verifique o usuário ou a senha");
     return;
   }
 
+  // 6 - Salva a sessão do usuário
   saveSession(email, checkSession);
 
+  // 7 - Se dados de login forem válidos, redireciona o usuário para a página principal
   window.location.href = "home.html";
 });
 
+// Salva a conta no localStorage
 function saveAccount(data) {
   localStorage.setItem(data.login, JSON.stringify(data));
 }
 
+// Salva a sessão do usuário
 function saveSession(data, saveSession) {
   if (saveSession) {
     localStorage.setItem("session", data);
@@ -99,6 +114,7 @@ function saveSession(data, saveSession) {
   sessionStorage.setItem("logged", data);
 }
 
+// Verifica se o usuário marcou a opção de manter a conta logada
 function checkLogged() {
   if (session) {
     sessionStorage.setItem("logged", session);
